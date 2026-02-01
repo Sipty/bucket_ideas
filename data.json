@@ -1,7 +1,4 @@
 {
- "a": [
-  "view"
- ],
  "bug:": [
   "cant handle brackets well. Even when theyre escaped."
  ],
@@ -21,17 +18,8 @@
   "~~",
   "cock rocket 8===D~~~~"
  ],
- "sex:": [
-  "haver 8===D~~~~ (. )( .)",
-  "haver 8===D~~~~ (. )( .)",
-  "haver 8===D~~~~ (. )( .)",
-  "haver 8===D~~~~ (. )( .)",
-  "haver 8===D~~~~ (. )( .)",
-  "haver 8===D~~~~ (. )( .)",
-  "haver 8===D~~~~ (. )( .)"
- ],
  "test:": [
-  "boobs"
+  "123"
  ],
  "todo:": [
   "figure out how can I backup my homelab.",
