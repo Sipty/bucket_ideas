@@ -27,15 +27,35 @@ func loadData() (buckets map[string][]string) {
 }
 
 func saveData(buckets map[string][]string) error {
-	// Serializes and saves data to file path.
+	data, err := tidyBuckets(buckets)
+	if err != nil {
+		fmt.Printf("Well shite, we failed saving the data!")
+	}
+
+	printBuckets(buckets)
+
+	os.WriteFile(DATAPATH, data, 0644)
+
+	return nil
+}
+
+func tidyBuckets(buckets map[string][]string) ([]byte, error) {
+	// Serialize data and return it nice and indented
 	data, err := json.MarshalIndent(buckets, "", " ")
 	if err != nil {
 		fmt.Printf("Error trying to Marshal buckets in saveData! Error:%v", err)
+		return nil, err
 	}
+	return data, nil
+}
 
-	fmt.Printf("Here's how the data looks like thus far:\n\n%s\n\n", string(data))
-
-	os.WriteFile(DATAPATH, data, 0644)
+func printBuckets(buckets map[string][]string) error {
+	data, err := tidyBuckets(buckets)
+	if err != nil {
+		fmt.Printf("err printing buckets")
+		return err
+	}
+	fmt.Printf("Here's the data: \n%v\n", string(data))
 
 	return nil
 }
@@ -49,6 +69,8 @@ func handleInput(buckets map[string][]string) error {
 
 		Happy path implementation:
 		bi vid: talk about how awesome Go is
+
+		TODO: reorg the arg handler to something cleaner.
 	*/
 	if len(os.Args) >= 3 {
 		// NB: This is only the happy path, definitely Fix it up :)
@@ -56,7 +78,14 @@ func handleInput(buckets map[string][]string) error {
 		val := strings.Join(os.Args[2:], " ")
 
 		buckets[key] = append(buckets[key], val)
+		return nil
 	}
+
+	if os.Args[1] == "view" {
+		printBuckets(buckets)
+		return errors.New("View invoked.")
+	}
+	// TODO add a help section :)
 
 	return errors.New("Too few args king, supply at least one! :)")
 
@@ -67,7 +96,7 @@ func main() {
 
 	err := handleInput(buckets)
 	if err != nil {
-		fmt.Printf("Ooof... %v \n", err)
+		return // TODO: is this the best way to handle it?
 	}
 
 	saveData(buckets)

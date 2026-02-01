@@ -1,4 +1,18 @@
 {
+ "a": [
+  "view"
+ ],
+ "bug:": [
+  "cant handle brackets well. Even when theyre escaped."
+ ],
+ "feat:": [
+  "figure out how to always pick up the latest version of the tool locally installed",
+  "-might be duplicate- aliases for tags",
+  "add support for AI idea organisation! Would be so cool to have an AI sort/ handle the different tags go run . feat: -might be duplicate- aliases for tags!"
+ ],
+ "idea:": [
+  "allow for multiple aliases for the same bucket"
+ ],
  "penis:": [
   "woah woah woah",
   "~~ ~~ ~~",
@@ -9,6 +23,22 @@
  ],
  "sex:": [
   "haver 8===D~~~~ (. )( .)",
+  "haver 8===D~~~~ (. )( .)",
+  "haver 8===D~~~~ (. )( .)",
+  "haver 8===D~~~~ (. )( .)",
+  "haver 8===D~~~~ (. )( .)",
+  "haver 8===D~~~~ (. )( .)",
   "haver 8===D~~~~ (. )( .)"
+ ],
+ "test:": [
+  "boobs"
+ ],
+ "todo:": [
+  "figure out how can I backup my homelab.",
+  "look to upgrade project with an off the shelf arg/ config handler. Or make one myself",
+  "look to upgrade project with an off the shelf arg/ config handler. Or make one myself"
+ ],
+ "vid:": [
+  "talk about this project"
  ]
 }
