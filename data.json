@@ -1,20 +1,36 @@
 {
+ "art:": [
+  "https://grafitschool.gumroad.com/l/ueysl look into studying, for getting back into art"
+ ],
  "bug:": [
   "cant handle brackets well. Even when theyre escaped."
  ],
  "feat:": [
   "figure out how to always pick up the latest version of the tool locally installed",
   "-might be duplicate- aliases for tags",
-  "add support for AI idea organisation! Would be so cool to have an AI sort/ handle the different tags go run . feat: -might be duplicate- aliases for tags!"
+  "add support for AI idea organisation! Would be so cool to have an AI sort/ handle the different tags go run . feat: -might be duplicate- aliases for tags!",
+  "add a UI integration for idea collection and bucket viz, rather than one liners"
  ],
  "idea:": [
   "allow for multiple aliases for the same bucket"
  ],
+ "read:": [
+  "https://www.cncf.io/case-studies/bloomberg/"
+ ],
  "todo:": [
   "figure out how can I backup my homelab.",
-  "look to upgrade project with an off the shelf arg/ config handler. Or make one myself"
+  "look to upgrade project with an off the shelf arg/ config handler. Or make one myself",
+  "compare traefik vs caddy vs nginx",
+  "look into alpine.js/ templec",
+  "update CV to hold locations",
+  "update CV to describe roles better"
  ],
  "vid:": [
-  "talk about this project"
+  "talk about this project",
+  "talk about dokploy",
+  "talk about how I would have never found Dokploy, was it not for watching youtube/ reading blogs!",
+  "learning with AI - how much am I actually learning? VS watching youtube/ blogs",
+  "is it too late to start learning software as a senior engineer in 2026",
+  "the first full course I ever finished - talk about the Go course I just finished"
  ]
 }
